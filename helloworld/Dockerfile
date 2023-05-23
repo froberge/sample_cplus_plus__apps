@@ -2,13 +2,13 @@
 FROM gcc:4.9
 
 # Copy the current folder which contains C++ source code to the Docker image under /usr/src
-COPY . /usr/src/testapp
+COPY . /usr/src/helloworld
 
 # Specify the working directory
-WORKDIR /usr/src/testapp
+WORKDIR /usr/src/helloworld
 
 # Use GCC to compile the Test.cpp source file
-RUN g++ -o Test Test.cpp
+RUN g++ -o Helloworld helloworld.cpp
 
 # Run the program output from the previous step
-CMD ["./Test"]
+CMD ["./Helloworld"]
